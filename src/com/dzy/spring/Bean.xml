@@ -9,5 +9,14 @@
           scope="singleton" init-method="myInit" destroy-method="myDestroy">
     </bean>
 
-    <bean id="BeanPostProcessorImp" class="com.dzy.spring.BeanPostProcessorImp"></bean>
+    <bean id="beanPostProcessorImp" class="com.dzy.spring.BeanPostProcessorImp"></bean>
+
+    <bean id="contextStartedEventHandler" class="com.dzy.spring.ContextStartedEventHandler"></bean>
+
+    <bean id="contextStoppedEventHandler" class="com.dzy.spring.ContextStoppedEventHandler"></bean>
+
+    <bean id="myApplicationEventPublish" class="com.dzy.spring.MyApplicationEventPublish"></bean>
+
+    <bean id="myApplicationEventHandler" class="com.dzy.spring.MyApplicationEventHandler"></bean>
+    <bean id="myApplicationEventHandler2" class="com.dzy.spring.MyApplicationEventHandler2"></bean>
 </beans>

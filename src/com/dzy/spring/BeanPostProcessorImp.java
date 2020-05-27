@@ -21,7 +21,7 @@ public class BeanPostProcessorImp implements BeanPostProcessor {
      */
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("bean"+beanName+"实例化前执行");
+        System.out.println("bean:"+beanName+"实例化前执行");
         return bean;
     }
 
@@ -35,7 +35,7 @@ public class BeanPostProcessorImp implements BeanPostProcessor {
      */
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("bean"+beanName+"实例化后执行");
+        System.out.println("bean:"+beanName+"实例化后执行");
         return bean;
     }
 }
