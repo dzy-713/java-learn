@@ -18,11 +18,17 @@ public class MainApp {
         //这里第二次获取的bean实例还是之前的那个,这里也不会执行内部指定的初始化方法
         SpringSingletonBean objB = (SpringSingletonBean) context.getBean("springSingletonBean");
         System.out.println(objB.getMsg());
+        //aop测试
+        objB.doPrintInfo();
+        try{
+            objB.doThrowException();
+        }catch (Exception e){
+            System.out.println("除数为0的异常已捕捉");
+        }
         //自定义事件
         MyApplicationEventPublish myApplicationEventPublish =
                 (MyApplicationEventPublish) context.getBean("myApplicationEventPublish");
         myApplicationEventPublish.publish();
-
         ((ClassPathXmlApplicationContext) context).start();
         ((ClassPathXmlApplicationContext) context).stop();
         //销毁

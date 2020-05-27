@@ -47,5 +47,20 @@ public class SpringSingletonBean implements DisposableBean, InitializingBean {
         System.out.println("xml文件中,指定destroy方法");
     }
 
+    /**
+     * 打印内容
+     */
+    public String doPrintInfo(){
+        System.out.println("打印内容:msg="+msg);
+        return "打印内容:msg="+msg;
+    }
+
+    /**
+     * 故意抛出异常的方法
+     */
+    public String doThrowException(){
+        int x= 1/0;
+        return x+"";
+    }
 
 }

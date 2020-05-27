@@ -2,8 +2,11 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
     <bean id="springSingletonBean" class="com.dzy.spring.SpringSingletonBean"
           scope="singleton" init-method="myInit" destroy-method="myDestroy">
@@ -19,4 +22,27 @@
 
     <bean id="myApplicationEventHandler" class="com.dzy.spring.MyApplicationEventHandler"></bean>
     <bean id="myApplicationEventHandler2" class="com.dzy.spring.MyApplicationEventHandler2"></bean>
+
+
+    <aop:config>
+        <aop:aspect id="log" ref="loggingForXml">
+            <aop:pointcut id="selectAll"
+                          expression="execution(* com.dzy.spring.SpringSingletonBean.do*(..))"/>
+            <aop:before pointcut-ref="selectAll" method="beforeAdvice"/>
+            <aop:after pointcut-ref="selectAll" method="afterAdvice"/>
+            <aop:after-returning pointcut-ref="selectAll"
+                                 returning="retVal"
+                                 method="afterReturningAdvice"/>
+            <aop:after-throwing pointcut-ref="selectAll"
+                                throwing="ex"
+                                method="afterThrowingAdvice"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="loggingForXml" class="com.dzy.spring.LoggingForXml"/>
+    <bean id="loggingForAnnotation" class="com.dzy.spring.LoggingForAnnotation"/>
+
+    <!--aop编程,允许注解模式-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
 </beans>
