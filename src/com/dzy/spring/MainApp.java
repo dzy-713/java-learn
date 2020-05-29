@@ -3,6 +3,8 @@ package com.dzy.spring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 /**
  * @author douzy
  * @date 2020-05-26.
@@ -29,6 +31,16 @@ public class MainApp {
         MyApplicationEventPublish myApplicationEventPublish =
                 (MyApplicationEventPublish) context.getBean("myApplicationEventPublish");
         myApplicationEventPublish.publish();
+        //使用jdbc查询所有用户数据
+        SystemUserDaoImp systemUserDaoImp = (SystemUserDaoImp)context.getBean("systemUserDaoImp");
+        List<SystemUser> list =systemUserDaoImp.findAll();
+        int i=1;
+        for(SystemUser systemUser:list){
+            System.out.println("数据"+i+"-->"+systemUser.toString());
+            i++;
+        }
+        //使用jdbc调用存储过程
+        List<SystemUser> list2 =systemUserDaoImp.findAllByCall();
         ((ClassPathXmlApplicationContext) context).start();
         ((ClassPathXmlApplicationContext) context).stop();
         //销毁

@@ -45,4 +45,17 @@
     <!--aop编程,允许注解模式-->
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
+    <!--spring-jdbc配置-->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/user-center"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+    <bean id="systemUserDaoImp" class="com.dzy.spring.SystemUserDaoImp">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
 </beans>
