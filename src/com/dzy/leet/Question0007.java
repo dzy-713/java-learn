@@ -20,7 +20,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question7 {
+public class Question0007 {
 
     /**
      * 更优解,采用数值取余取模换算
@@ -86,7 +86,7 @@ public class Question7 {
 
     public static void main(String[] args) {
         int x = 1534236469;
-        int result = new Question7().reverse(x);
+        int result = new Question0007().reverse(x);
         System.out.println(result);
     }
 }

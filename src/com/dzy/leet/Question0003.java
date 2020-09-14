@@ -27,7 +27,7 @@ import java.util.Set;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question3 {
+public class Question0003 {
 
 
     public int lengthOfLongestSubstring(String s) {
@@ -76,7 +76,7 @@ public class Question3 {
 
     public static void main(String[] args) {
         String s = "ab";
-        int result = new Question3().lengthOfLongestSubstring(s);
+        int result = new Question0003().lengthOfLongestSubstring(s);
         System.out.println(result);
     }
 }

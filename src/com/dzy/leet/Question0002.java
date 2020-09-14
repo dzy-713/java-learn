@@ -18,7 +18,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question2 {
+public class Question0002 {
 
     public class ListNode {
         int val;
@@ -124,9 +124,9 @@ public class Question2 {
 
     public static void main(String[] args) {
 
-        ListNode l1 = new Question2().intToLink(9);
-        ListNode l2 = new Question2().intToLink(999999999);
-        ListNode result = new Question2().addTwoNumbers(l1, l2);
+        ListNode l1 = new Question0002().intToLink(9);
+        ListNode l2 = new Question0002().intToLink(999999999);
+        ListNode result = new Question0002().addTwoNumbers(l1, l2);
         System.out.println(result);
     }
 }

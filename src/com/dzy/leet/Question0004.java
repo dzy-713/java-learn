@@ -21,7 +21,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question4 {
+public class Question0004 {
 
 
     /**
@@ -71,7 +71,7 @@ public class Question4 {
     public static void main(String[] args) {
         int[] nums1 = new int[]{};
         int[] nums2 = new int[]{-2, -1};
-        double result = new Question4().findMedianSortedArrays(nums1, nums2);
+        double result = new Question0004().findMedianSortedArrays(nums1, nums2);
         System.out.println(result);
     }
 }

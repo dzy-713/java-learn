@@ -40,7 +40,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question8 {
+public class Question0008 {
 
 
     /**
@@ -91,7 +91,7 @@ public class Question8 {
 
     public static void main(String[] args) {
         String str = "0 1";
-        int result = new Question8().myAtoi(str);
+        int result = new Question0008().myAtoi(str);
         System.out.println(result);
     }
 }

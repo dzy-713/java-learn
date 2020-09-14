@@ -31,7 +31,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question6 {
+public class Question0006 {
 
     /**
      * 定义二维数组,进行行列转换,排列后重新输出
@@ -94,7 +94,7 @@ public class Question6 {
     public static void main(String[] args) {
         String s = "1234";
         int numRows = 2;
-        String result = new Question6().convert(s, numRows);
+        String result = new Question0006().convert(s, numRows);
         System.out.println(result);
     }
 }

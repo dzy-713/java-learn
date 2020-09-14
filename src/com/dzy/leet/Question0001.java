@@ -17,7 +17,7 @@ package com.dzy.leet;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question1 {
+public class Question0001 {
 
     public int[] twoSum(int[] nums, int target) {
         for(int i=0;i<=nums.length-2;i++){
@@ -35,7 +35,7 @@ public class Question1 {
     public static void main(String[] args) {
         int[] nums=new int[]{3,2,4};
         int target=6;
-        int[] result = new Question1().twoSum(nums,target);
+        int[] result = new Question0001().twoSum(nums,target);
         System.out.println("["+result[0]+","+result[1]+"]");
     }
 }

@@ -22,7 +22,7 @@ import java.util.Set;
  * @author douzy
  * @date 2020-01-13.
  */
-public class Question5 {
+public class Question0005 {
 
     /**
      * 采用中心扩展法处理
@@ -140,7 +140,7 @@ public class Question5 {
 
     public static void main(String[] args) {
         String s = "aaa";
-        String result = new Question5().longestPalindrome(s);
+        String result = new Question0005().longestPalindrome(s);
         System.out.println(result);
     }
 }
